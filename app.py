@@ -1,0 +1,53 @@
+import streamlit as st
+import os
+import google.generativeai as genai
+
+# Set up Google API key for generative AI
+GOOGLE_API_KEY = "AIzaSyDrIV31lOfDBc4cH6_gNz7NLagwRQh15v0"
+api_key = os.getenv('GOOGLE_API_KEY', GOOGLE_API_KEY)
+genai.configure(api_key=GOOGLE_API_KEY)
+model = genai.GenerativeModel('gemini-1.5-flash')
+
+st.set_page_config(page_title="BizGen", page_icon="images/logo.png")
+
+# Function to map model roles to Streamlit roles
+def role_to_streamlit(role):
+    if role == "model":
+        return "assistant"
+    else:
+        return role
+
+# Initialize chat history in session state
+if "chat" not in st.session_state:
+    st.session_state.chat = model.start_chat(history=[])
+
+# Add app logo at the top
+st.image("", width=200)  
+
+
+st.title("BizGen (Business Idea Generator) ")
+
+# Display additional information
+st.subheader("Final Project in CCS 229 - Intelligent Systems")
+st.subheader("Ma. April G. Suarnaba - BSCS 3-B AI")
+st.write("BizGen or (Business Idea Generator) is an innovative platform designed to revolutionize the way entrepreneurs and business enthusiasts generate and refine business ideas.")
+
+# Display chat messages from history above current input box
+for message in st.session_state.chat.history:
+    with st.chat_message(role_to_streamlit(message.role)):
+        st.markdown(message.parts[0].text)
+
+# Accept user's next message, add to context, resubmit context to Gemini
+if prompt := st.chat_input("Ask me any questions about Business!"):
+    # Display user's last message
+    st.chat_message("user").markdown(prompt)
+
+    # Send user entry to Gemini and read the response
+    response = st.session_state.chat.send_message(prompt)
+
+    # Display assistant's response
+    with st.chat_message("assistant"):
+        st.markdown(response.text)
+
+
+
