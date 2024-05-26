@@ -1,7 +1,6 @@
-# CCS 229 - Final Project
+# Final Project in CCS 229 - Intelligent Systems
 This project was developed using Streamlit and OpenAI's Gemini model.
-## Ma. April G. Suarnaba 
-# BSCS 3B AI 
+## Ma. April G. Suarnaba - BSCS 3B AI 
 
 ## Streamlink link: https://ccs229-finalproject-fehdbadqzl3hwir3ehqp4q.streamlit.app/
 # BizGen GPT: Empowering Entrepreneurs with AI-Driven Business Ideas
