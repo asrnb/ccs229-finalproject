@@ -3,7 +3,7 @@ This project was developed using Streamlit and OpenAI's Gemini model.
 ## Ma. April G. Suarnaba 
 # BSCS 3B AI 
 
-# Streamlink link: https://ccs229-finalproject-fehdbadqzl3hwir3ehqp4q.streamlit.app/
+## Streamlink link: https://ccs229-finalproject-fehdbadqzl3hwir3ehqp4q.streamlit.app/
 # BizGen GPT: Empowering Entrepreneurs with AI-Driven Business Ideas
 
 BizGen GPT is a cutting-edge web application powered by OpenAI's GPT model, designed to revolutionize the way entrepreneurs and business enthusiasts generate innovative business ideas. With BizGen GPT, users can harness the power of artificial intelligence to explore various industries, target audiences, and unique selling points, enabling them to uncover new opportunities and drive business growth.
