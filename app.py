@@ -45,7 +45,7 @@ def navbar():
     st.sidebar.title("Navigation")
     st.sidebar.header("BizGen GPT")
     st.sidebar.markdown("Choose an option:")
-    page = st.sidebar.radio("", ["Home", "About"])
+    page = st.sidebar.radio("Select Page", ["Home", "About"])
     return page
 
 # Function to create header
