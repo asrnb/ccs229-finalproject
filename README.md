@@ -1,7 +1,7 @@
 # CCS 229 - Final Project
 This project was developed using Streamlit and OpenAI's Gemini model.
 ## Ma. April G. Suarnaba 
-## BSCS 3B AI 
+# BSCS 3B AI 
 
 
 # BizGen GPT: Empowering Entrepreneurs with AI-Driven Business Ideas
