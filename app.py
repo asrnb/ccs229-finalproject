@@ -1,16 +1,17 @@
 import streamlit as st
 import os
 import openai
+import google.generativeai as genai
 
-# Set up OpenAI API key for generative AI
-OPENAI_API_KEY = "AIzaSyDrIV31lOfDBc4cH6_gNz7NLagwRQh15v0"
-openai.api_key = os.getenv("AIzaSyDrIV31lOfDBc4cH6_gNz7NLagwRQh15v0", OPENAI_API_KEY)
+# Get Google API key from environment variable
+GOOGLE_API_KEY = "AIzaSyDrIV31lOfDBc4cH6_gNz7NLagwRQh15v0"
+api_key = os.getenv("AIzaSyDrIV31lOfDBc4cH6_gNz7NLagwRQh15v0", GOOGLE_API_KEY)
 
 st.set_page_config(page_title="BizGen")
 
 # Function to map model roles to Streamlit roles
 def role_to_streamlit(role):
-    if role == "model":str
+    if role == "model":
         return "assistant"
     else:
         return role
